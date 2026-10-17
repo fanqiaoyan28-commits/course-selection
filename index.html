@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta Charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <tittle>學生選課申請系統</tittle>
+        <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+        <main class="container">
+            <h1>學生選課申請系統</h1>
+            <p>請填寫以下資料，完成選課申請。</p>
+
+            <form id="course-form">
+                <lable for="name">姓名</lable>
+                <input id="name" name="name" type="text" required>
+                <lable for="studentId">學號</lable>
+                <input id="studentId" name="studentId" type="text" required>
+                <lable for="email">Email</lable>
+                <input id="email" name="email" type="email" required>
+                <lable for="classGrade">班級/年級</lable>
+                <input id="classGrade" name="classGrade" type="text" required>
+                <labe for="course">選擇課程</labe>
+                <select id="course" name="course" required>
+                 <option value="">請選擇課程</option>
+                 <option value="程式設計">程式設計</option>
+                 <option value="網頁設計">網頁設計</option>
+                 <option value="資料庫管理">資料庫管理</option>
+                 <option value="資訊管理">資訊管理</option>
+                 <option value="商業概論">商業概論</option>
+                </select>
+
+                <p id="course-description" class="description">請選擇一門課程。</p>
+
+                <lable for="consent">上傳老師同意書</lable>
+                <input id="consent" name="consent" type="file"
+                accept=".pdf,.jpg,.jpeg,.png">
+                <lable for="note">備注</lable>
+                <textarea id="note" name="note" rows="4">
+                </textarea>
+                
+                <div class="buttons">
+                    <button type="reset">重新填寫</button>
+                    <button type="submit">送出申請</button>
+                </div>
+            </form>
+            <div id="message" role="status" aria-live="polite"></div>
+            <div id="result"></div>
+         </main>
+
+         <script src="script.js"></script>
+    </body>
+</html>
